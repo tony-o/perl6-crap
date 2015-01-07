@@ -1,12 +1,7 @@
+class HTTP::Server::Fork;
 use NativeCall;
+use libserver;
 
-sub go 
-  is native('libserver')
-  returns int32 { ... };
-
-
-class HTTP::Server::Fork {
-  method go {
-    go;
-  }
-}
+ 
+our sub go is export { * };
+ 
