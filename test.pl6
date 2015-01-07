@@ -4,5 +4,5 @@ use lib 'lib';
 use HTTP::Server::Fork;
 
 my $s = HTTP::Server::Fork.new;
-say $s.perl;
+say $s.r;
 

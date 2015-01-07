@@ -3,5 +3,6 @@ use NativeCall;
 use libserver;
 
  
-our sub go is export { * };
+our sub go is native('libserver') is export { ... };
  
+ method r { go; }
