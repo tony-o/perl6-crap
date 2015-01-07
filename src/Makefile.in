@@ -1,0 +1,7 @@
+all: %DESTDIR%/libserver%SO%
+
+%DESTDIR%/libserver%SO%: libserver%O%
+	    %LD% %LDSHARED% %LDFLAGS% %LIBS% %LDOUT%%DESTDIR%/libserver%SO% libserver%O%
+
+libserver%O%: libserver.c
+	    %CC% -c %CCSHARED% %CCFLAGS% %CCOUT%libserver%O% libserver.c
